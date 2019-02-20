@@ -7,6 +7,7 @@ function Pane(props) {
   let classes = 'layout-pane';
   const style = {};
   if (!props.primary) {
+    classes = classes + (props.secondaryClassName ? " " + props.secondaryClassName : "");
     if (props.vertical) {
       style.height = `${size}${unit}`;
     } else {
@@ -14,6 +15,7 @@ function Pane(props) {
     }
   } else {
     classes += ' layout-pane-primary';
+    classes = classes + (props.primaryClassName ? " " + props.primaryClassName : "");
   }
   return (
     <div className={classes} style={style}>{props.children}</div>

@@ -196,7 +196,8 @@ class SplitterLayout extends React.Component {
         size = this.state.secondaryPaneSize;
       }
       wrappedChildren.push(
-        <Pane vertical={this.props.vertical} percentage={this.props.percentage} primary={primary} size={size}>
+        <Pane vertical={this.props.vertical} percentage={this.props.percentage} primary={primary} size={size}
+          primaryClassName={this.props.primaryClassName} secondaryClassName={this.props.secondaryClassName}>
           {children[i]}
         </Pane>
       );
